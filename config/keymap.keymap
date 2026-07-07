@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -10,17 +9,17 @@
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <8 7>;
+            key-positions = <21 20>;
         };
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <1 2>;
+            key-positions = <15 14>;
         };
 
         bs {
             bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
+            key-positions = <22 21>;
         };
     };
 
@@ -49,81 +48,81 @@
 
         default_layer {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp Q    &kp W    &kp E    &kp R    &kp T            &kp Y    &kp U    &kp I    &kp O    &lt 7 P    &none
-&none    &mt LEFT_CONTROL A    &kp S    &kp D    &kp F    &kp G    &none    &none    &kp H    &kp J    &kp K    &kp L    &mt RIGHT_CONTROL MINUS    &none
-&none    &mt LEFT_SHIFT Z    &lt 3 X    &kp C    &kp V    &kp B    &none    &none    &kp N    &kp M    &kp COMMA    &lt 3 PERIOD    &mt RIGHT_SHIFT SLASH    &none
-&none    &kp LEFT_WIN    &kp LEFT_CONTROL    &kp ESCAPE    &kp LEFT_ALT    &lt 4 SPACE    &lt_to_layer_0 2 TAB    &lt_to_layer_0 5 BACKSPACE    &lt 3 ENTER    &none    &none    &none    &kp RIGHT_ALT    &none
+&none  &none               &none             &none       &none         &none                                                          &none        &none  &none      &none         &none                    &none
+&none  &kp Q               &kp W             &kp E       &kp R         &kp T                                                          &kp Y        &kp U  &kp I      &kp O         &lt 7 P                  &none
+&none  &mt LEFT_CONTROL A  &kp S             &kp D       &kp F         &kp G        &none                 &none                       &kp H        &kp J  &kp K      &kp L         &mt RIGHT_CONTROL MINUS  &none
+&none  &mt LEFT_SHIFT Z    &lt 3 X           &kp C       &kp V         &kp B        &none                 &none                       &kp N        &kp M  &kp COMMA  &lt 3 PERIOD  &mt RIGHT_SHIFT SLASH    &none
+&none  &kp LEFT_WIN        &kp LEFT_CONTROL  &kp ESCAPE  &kp LEFT_ALT  &lt 4 SPACE  &lt_to_layer_0 2 TAB  &lt_to_layer_0 5 BACKSPACE  &lt 3 ENTER  &none  &none      &none         &kp RIGHT_ALT            &none
             >;
         };
 
         MOUSE {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &to_layer_0 Q    &to_layer_0 W    &to_layer_0 E    &to_layer_0 R    &to_layer_0 T            &to_layer_0 Y    &to_layer_0 U    &to_layer_0 I    &to_layer_0 O    &lt 7 P    &none
-&none    &mt LEFT_CONTROL A    &to_layer_0 S    &mkp MB2    &mkp MB1    &to_layer_0 G    &none    &none    &to_layer_0 H    &mkp MB1    &mkp MB2    &to_layer_0 L    &mt RIGHT_CONTROL MINUS    &none
-&none    &mt LEFT_SHIFT Z    &lt 3 X    &to_layer_0 C    &to_layer_0 V    &to_layer_0 B    &none    &none    &to_layer_0 N    &to_layer_0 M    &to_layer_0 COMMA    &lt 3 PERIOD    &mt RIGHT_SHIFT SLASH    &none
-&none    &kp LEFT_GUI    &trans    &kp ESCAPE    &kp LEFT_ALT    &trans    &trans    &trans    &trans    &none    &none    &none    &trans    &none
+&none  &none               &none          &none          &none          &none                          &none          &none          &none              &none          &none                    &none
+&none  &to_layer_0 Q       &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                  &to_layer_0 Y  &to_layer_0 U  &to_layer_0 I      &to_layer_0 O  &lt 7 P                  &none
+&none  &mt LEFT_CONTROL A  &to_layer_0 S  &mkp MB2       &mkp MB1       &to_layer_0 G  &none   &none   &to_layer_0 H  &mkp MB1       &mkp MB2           &to_layer_0 L  &mt RIGHT_CONTROL MINUS  &none
+&none  &mt LEFT_SHIFT Z    &lt 3 X        &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &none   &none   &to_layer_0 N  &to_layer_0 M  &to_layer_0 COMMA  &lt 3 PERIOD   &mt RIGHT_SHIFT SLASH    &none
+&none  &kp LEFT_GUI        &trans         &kp ESCAPE     &kp LEFT_ALT   &trans         &trans  &trans  &trans         &none          &none              &none          &trans                   &none
             >;
         };
 
         CURSOR {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp ESCAPE    &none    &none    &none    &none            &none    &none    &kp UP_ARROW    &none    &none    &none
-&none    &kp LEFT_CONTROL    &none    &mkp MB2    &mkp MB1    &none    &none    &none    &kp PAGE_UP    &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT_ARROW    &none    &none
-&none    &kp LEFT_SHIFT    &none    &none    &none    &none    &none    &none    &kp PAGE_DOWN    &kp HOME    &kp END    &none    &none    &none
-&none    &trans    &trans    &trans    &trans    &trans    &trans    &kp DEL    &trans    &none    &none    &none    &trans    &none
+&none  &none             &none   &none     &none     &none                    &none          &none           &none           &none            &none   &none
+&none  &kp ESCAPE        &none   &none     &none     &none                    &none          &none           &kp UP_ARROW    &none            &none   &none
+&none  &kp LEFT_CONTROL  &none   &mkp MB2  &mkp MB1  &none   &none   &none    &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
+&none  &kp LEFT_SHIFT    &none   &none     &none     &none   &none   &none    &kp PAGE_DOWN  &kp HOME        &kp END         &none            &none   &none
+&none  &trans            &trans  &trans    &trans    &trans  &trans  &kp DEL  &trans         &none           &none           &none            &trans  &none
             >;
         };
 
         FUNCTION {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp ESCAPE    &kp F2    &kp F3    &kp F4    &kp F5            &kp F6    &kp F7    &kp F8    &kp F9    &kp F10    &none
-&none    &kp LEFT_CONTROL    &none    &mkp RCLK    &mkp LCLK    &none    &none    &none    &kp F12    &mkp LCLK    &mkp RCLK    &none    &kp RIGHT_CONTROL    &none
-&none    &kp LEFT_SHIFT    &none    &none    &none    &none    &none    &none    &none    &none    &none    &none    &kp RIGHT_SHIFT    &none
-&none    &trans    &trans    &trans    &kp LEFT_ALT    &trans    &trans    &kp BACKSPACE    &trans    &none    &none    &none    &trans    &none
+&none  &none             &none   &none      &none         &none                          &none    &none      &none      &none   &none              &none
+&none  &kp ESCAPE        &kp F2  &kp F3     &kp F4        &kp F5                         &kp F6   &kp F7     &kp F8     &kp F9  &kp F10            &none
+&none  &kp LEFT_CONTROL  &none   &mkp RCLK  &mkp LCLK     &none   &none   &none          &kp F12  &mkp LCLK  &mkp RCLK  &none   &kp RIGHT_CONTROL  &none
+&none  &kp LEFT_SHIFT    &none   &none      &none         &none   &none   &none          &none    &none      &none      &none   &kp RIGHT_SHIFT    &none
+&none  &trans            &trans  &trans     &kp LEFT_ALT  &trans  &trans  &kp BACKSPACE  &trans   &none      &none      &none   &trans             &none
             >;
         };
 
         NUMBER {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5            &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    &kp NUMBER_0    &none
-&none    &mt LEFT_CONTROL KP_PLUS    &kp KP_MINUS    &kp KP_ASTERISK    &kp KP_SLASH    &kp EQUAL    &none    &none    &kp RIGHT_ALT    &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6    &kp RIGHT_CONTROL    &none
-&none    &kp LEFT_SHIFT    &none    &none    &none    &kp LEFT_ALT    &none    &none    &kp NUMBER_0    &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &mt RIGHT_SHIFT PERIOD    &none
-&none    &trans    &trans    &trans    &trans    &trans    &trans    &kp BACKSPACE    &kp ENTER    &none    &none    &none    &trans    &none
+&none  &none                     &none         &none            &none         &none                                &none          &none         &none         &none         &none                   &none
+&none  &kp NUMBER_1              &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp NUMBER_5                         &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0            &none
+&none  &mt LEFT_CONTROL KP_PLUS  &kp KP_MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp EQUAL     &none   &none          &kp RIGHT_ALT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RIGHT_CONTROL       &none
+&none  &kp LEFT_SHIFT            &none         &none            &none         &kp LEFT_ALT  &none   &none          &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &mt RIGHT_SHIFT PERIOD  &none
+&none  &trans                    &trans        &trans           &trans        &trans        &trans  &kp BACKSPACE  &kp ENTER      &none         &none         &none         &trans                  &none
             >;
         };
 
         MARK {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp EXCLAMATION    &kp AT    &kp HASH    &kp DOLLAR    &kp PERCENT            &kp CARET    &kp AMPERSAND    &kp ASTERISK    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS    &none
-&none    &kp LEFT_CONTROL    &none    &kp MINUS    &kp EQUAL    &kp GRAVE    &none    &none    &kp BACKSLASH    &kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp SEMICOLON    &mt RIGHT_CONTROL SINGLE_QUOTE    &none
-&none    &kp LEFT_SHIFT    &none    &none    &none    &none    &none    &none    &none    &none    &kp COMMA    &kp PERIOD    &mt RIGHT_SHIFT SLASH    &none
-&none    &trans    &trans    &trans    &trans    &kp SPACE    &trans    &trans    &trans    &none    &none    &none    &trans    &none
+&none  &none             &none   &none      &none       &none                        &none          &none             &none              &none                 &none                           &none
+&none  &kp EXCLAMATION   &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                  &kp CARET      &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &none
+&none  &kp LEFT_CONTROL  &none   &kp MINUS  &kp EQUAL   &kp GRAVE    &none   &none   &kp BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON         &mt RIGHT_CONTROL SINGLE_QUOTE  &none
+&none  &kp LEFT_SHIFT    &none   &none      &none       &none        &none   &none   &none          &none             &kp COMMA          &kp PERIOD            &mt RIGHT_SHIFT SLASH           &none
+&none  &trans            &trans  &trans     &trans      &kp SPACE    &trans  &trans  &trans         &none             &none              &none                 &trans                          &none
             >;
         };
 
         WIRELESS {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none
-&none    &trans    &trans    &trans    &trans    &trans    &none    &none    &trans    &trans    &trans    &trans    &bt BT_CLR    &none
-&none    &trans    &trans    &trans    &trans    &trans    &none    &none    &studio_unlock    &trans    &trans    &trans    &bt BT_CLR_ALL    &none
-&none    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &none    &none    &none    &trans    &none
+&none  &none         &none         &none         &none         &none                         &none           &none         &none         &none         &none           &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none
+&none  &trans        &trans        &trans        &trans        &trans        &none   &none   &trans          &trans        &trans        &trans        &bt BT_CLR      &none
+&none  &trans        &trans        &trans        &trans        &trans        &none   &none   &studio_unlock  &trans        &trans        &trans        &bt BT_CLR_ALL  &none
+&none  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans          &none         &none         &none         &trans          &none
             >;
         };
 
         SCROLL {
             bindings = <
-&none    &none    &none    &none    &none    &none            &none    &none    &none    &none    &none    &none
-&none    &kp LC(LG(D))    &kp LC(LG(LEFT_ARROW))    &kp LG(UP_ARROW)    &kp LC(LG(RIGHT_ARROW))    &trans            &trans    &trans    &kp UP_ARROW    &trans    &trans    &none
-&none    &kp LEFT_CONTROL    &kp LG(LEFT_ARROW)    &kp LG(DOWN_ARROW)    &kp LG(RIGHT_ARROW)    &trans    &none    &none    &kp PAGE_UP    &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT_ARROW    &trans    &none
-&none    &kp LEFT_SHIFT    &trans    &trans    &trans    &kp LC(LG(F4))    &none    &none    &kp PAGE_DOWN    &kp HOME    &kp END    &trans    &trans    &none
-&none    &trans    &trans    &trans    &trans    &trans    &trans    &kp DELETE    &trans    &none    &none    &none    &trans    &none
+&none  &none             &none                   &none               &none                    &none                               &none          &none           &none           &none            &none   &none
+&none  &kp LC(LG(D))     &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT_ARROW))  &trans                              &trans         &trans          &kp UP_ARROW    &trans           &trans  &none
+&none  &kp LEFT_CONTROL  &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &trans          &none   &none       &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &none
+&none  &kp LEFT_SHIFT    &trans                  &trans              &trans                   &kp LC(LG(F4))  &none   &none       &kp PAGE_DOWN  &kp HOME        &kp END         &trans           &trans  &none
+&none  &trans            &trans                  &trans              &trans                   &trans          &trans  &kp DELETE  &trans         &none           &none           &none            &trans  &none
             >;
         };
     };
