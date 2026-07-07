@@ -68,11 +68,11 @@
 
         CURSOR {
             bindings = <
-&none  &none             &none   &none     &none     &none                    &none          &none           &none           &none            &none   &none
-&none  &kp ESCAPE        &none   &none     &none     &none                    &none          &none           &kp UP_ARROW    &none            &none   &none
-&none  &kp LEFT_CONTROL  &none   &mkp MB2  &mkp MB1  &none   &none   &none    &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
-&none  &kp LEFT_SHIFT    &none   &none     &none     &none   &none   &none    &kp PAGE_DOWN  &kp HOME        &kp END         &none            &none   &none
-&none  &trans            &trans  &trans    &trans    &trans  &trans  &kp DEL  &trans         &none           &none           &none            &trans  &none
+&none  &none             &none   &none     &none     &none                          &none          &none           &none           &none            &none   &none
+&none  &kp ESCAPE        &none   &none     &none     &none                          &none          &none           &kp UP_ARROW    &none            &none   &none
+&none  &kp LEFT_CONTROL  &none   &mkp MB2  &mkp MB1  &kp LEFT_ALT  &none   &none    &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none
+&none  &kp LEFT_SHIFT    &none   &none     &none     &none         &none   &none    &kp PAGE_DOWN  &kp HOME        &kp END         &none            &none   &none
+&none  &trans            &trans  &trans    &trans    &trans        &trans  &kp DEL  &trans         &none           &none           &none            &trans  &none
             >;
         };
 
