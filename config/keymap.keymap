@@ -8,10 +8,39 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-            layers = <2>;
+        lang1 {
+            bindings = <&kp LANG1>;
+            key-positions = <8 7>;
+        };
+
+        lang2 {
+            bindings = <&kp LANG2>;
+            key-positions = <1 2>;
+        };
+
+        bs {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+    };
+
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+    };
+
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
