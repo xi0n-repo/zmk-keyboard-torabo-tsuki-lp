@@ -17,3 +17,22 @@
 &size_l_transform {
     col-offset = <7>;
 };
+trackball_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        // 上記1番のオートマウス設定
+        input-processors = <&zip_temp_layer 1 600>;
+
+        // ★ここに特定のレイヤー限定のスクロール処理を「子ノード」として組み込む
+        scroller {
+            layers = <2 7>; // .keymap側で作成したスクロール専用レイヤーの番号（例：6）
+            
+            // トラックボールのX/Y入力をスクロール（MSC）イベントにコンバートする
+            input-processors = <
+                &zip_xy_to_scroll_mapper
+                &zip_scroll_scaler 1 3 // スクロールの速度（お好みで調整）
+            >;
+        };
+    };
