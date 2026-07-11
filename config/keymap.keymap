@@ -12,6 +12,7 @@
     quick-tap-ms = <300>;
     flavor = "balanced";
 };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -133,6 +134,15 @@
 &none  &kp LEFT_SHIFT    &trans                  &trans              &trans                   &kp LC(LG(F4))  &none   &none       &kp PAGE_DOWN  &kp HOME        &kp END         &trans           &trans  &none
 &none  &trans            &trans                  &trans              &trans                   &trans          &trans  &kp DELETE  &trans         &none           &none           &none            &trans  &none
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        wireless {
+            if-layers = <2 3>;
+            then-layer = <6>;
         };
     };
 };
